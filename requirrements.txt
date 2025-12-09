@@ -1,20 +1,23 @@
 ```python
-kagglehub==0.3.13
-numpy>=1.24.0
-pandas>=2.1.0
-scipy>=1.9.0
-statsmodels>=0.14.0
-matplotlib>=3.7.0
-scikit-learn>=1.1.0
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.13.1
+statsmodels==0.14.2
+matplotlib==3.9.2
+scikit-learn==1.5.2
 
-# dependencies / common supporting libs
-requests>=2.31.0
-PyYAML>=6.0
-tqdm>=4.66.0
-charset-normalizer>=3.0.0
-idna>=3.4
-urllib3>=1.26.10
-certifi>=2025.6.0
-colorama>=0.4.6
-packaging>=24.0
+# Kagglehub
+
+kagglehub==0.2.5
+
+# Kagglehub Dependencies
+requests==2.32.3
+PyYAML==6.0.2
+tqdm==4.66.5
+charset-normalizer==3.3.2
+idna==3.7
+urllib3==2.2.2
+certifi==2024.8.30
+colorama==0.4.6
+packaging==24.1
 ```
