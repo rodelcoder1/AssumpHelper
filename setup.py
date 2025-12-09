@@ -17,7 +17,7 @@ setup(
     description="Linear Regression Assumption Interpretation Guide",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/rodelcoder1/OOP2",
+    url="https://github.com/rodelcoder1/AssumpHelp",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
