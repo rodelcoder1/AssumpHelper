@@ -36,45 +36,58 @@ pip install -r requirements.txt
 ```
 #   Using Our Library
 ```python
-from hypothesis import Hypothesis
-import numpy as np
+import pandas as pd
 import statsmodels.api as sm
+import AssumpHelp
 
-# Example sample data
-x = np.array([1, 2, 3, 4, 5])
-y = np.array([2, 4, 5, 4, 5])
+# sample dataset
+df = pd.DataFrame({
+    "y": [10, 12, 13, 15, 16, 18],
+    "x1": [1, 2, 3, 4, 5, 6]
+})
 
-# Fit model
-model = Hypothesis(x, y)
-summary = model.fit()
+X = sm.add_constant(df["x1"])
+y = df["y"]
 
-# Show summary
-print(summary)
+model = sm.OLS(y, X).fit()
 
-# Predict using new data
-prediction = model.predict(np.array([6, 7, 8]))
-print(prediction)
+print("\n=== FUNCTIONAL EXAMPLES ===")
+
+# interpret_dw()
+print("\n--- interpret_dw() Example ---")
+print("DW 1.5:", AssumpHelp.interpret_dw(1.5))
+print("DW 2.0:", AssumpHelp.interpret_dw(2.0))
+
+# prepare_vars()
+print("\n--- prepare_vars() Example ---")
+fitted, residuals = AssumpHelp.prepare_vars(model, X, y)
+print("Predictions (first 5):", fitted[:5])
+print("Residuals (first 5):", residuals[:5])
+
+print("\n=== END OF FUNCTIONAL TESTS ===")
 ```
 # Example Output
 ```txt
-OLS Regression Results  
-============================================================
-Dep. Variable:                      y   
-Model:                            OLS   
-Method:                 Least Squares   
-No. Observations:                   5   
-Df Residuals:                       3   
-Df Model:                           1    
-============================================================
-coef    std err    t      p>|t|   [0.025   0.975]
--------------------------------------------------
-β0      1.5000     0.7906   1.8974   0.1535
-β1      0.7000     0.2280   3.0702   0.0547
-============================================================
-R-squared:                       0.7588
-AIC:                            10.7319
-BIC:                             9.9465
-============================================================
+=== FUNCTIONAL EXAMPLES ===
+
+--- interpret_dw() Example ---
+DW 1.5: DW statistic close to 2 indicates no autocorrelation assumption NOT VIOLATED.
+DW 2.0: DW statistic close to 2 indicates no autocorrelation assumption NOT VIOLATED.
+
+--- prepare_vars() Example ---
+Predictions (first 5): 0    10.142857
+1    11.685714
+2    13.228571
+3    14.771429
+4    16.314286
+dtype: float64
+Residuals (first 5): 0   -0.142857
+1    0.314286
+2   -0.228571
+3    0.228571
+4   -0.314286
+dtype: float64
+
 ```
 # Summary:
 
