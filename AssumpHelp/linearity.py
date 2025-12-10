@@ -11,7 +11,9 @@ class Linearity(Hypothesis):
     - Residuals vs Fitted plot
     """
     def fit(self):
-        self.fitted, self.residuals = prepare_vars(self.model, self.x, self.y)
+        self.fitted_model = sm.OLS(self.y, self.x_cons).fit()
+        self.fitted, self.residuals = prepare_vars(self.fitted_model, self.x_cons, self.y)
+        
    
     def test_linearity(self):
         """
@@ -19,8 +21,8 @@ class Linearity(Hypothesis):
         """
         self.fit()
         reset_model = sm.OLS(self.y,self.x_cons).fit()
-        self.result = sm.linear_reset(reset_model, power=3,test_type="fitted")
-        result_fstat, result_pval, df1, df2 = self.result
+        reset_result = linear_reset(reset_model, power=3,test_type="fitted")
+        result_fstat, result_pval = reset_result.statistic, reset_result.pvalue
         print("RESET Test for Linearity")
         print(f"F-statistic: {result_fstat:.4f}      p-value: {result_pval:.4f}")
         print("\nInterpretation:\n")
