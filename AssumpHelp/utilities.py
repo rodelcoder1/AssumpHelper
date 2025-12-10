@@ -13,7 +13,11 @@ def prepare_vars(model, x, y):
     """
     Prepares fitted and residual values
     """ 
-    
+    if hasattr(model, "predict"):
+        y_predictions = model.predict(x)
+    else:
+        raise ValueError("Model must be a fitted regression model.")
+        
     y_predictions = model.predict(x) #fitted
     residuals = y - y_predictions
     
