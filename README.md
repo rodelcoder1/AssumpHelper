@@ -22,6 +22,24 @@ Shapiro-Wilk Test - Tests for normality of residuals
 
 Durbin-Watson Test - Tests for independence of residuals
 
+# Developers
+**[Kirstine Roise G. Moog]** 
+Our distinguish Leader &  Inceptionist & Structural Design 
+**[Rodel P. Badilla]**
+Our Assistant Leader
+# Leaders Roles
+- Designed clean separation of concerns  
+- Implementing codes engine  
+- Created visualization tools
+- Enhanced plotting capabilities 
+**[Hannah Dennisse Y. AQUE]**
+**[James Walte C. Prollo]**
+**[Zell Caamino]**
+Back (support))
+- Built comprehensive test suite  
+- Wrote user documentation.
+- Quality assurance  
+
 # 📊 Diagnostic Visualizations
 Residuals vs Fitted Plot - Linearity and homoscedasticity assessment
 
