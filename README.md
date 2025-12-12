@@ -32,9 +32,11 @@ Our Assistant Leader
 - Implementing codes engine  
 - Created visualization tools
 - Enhanced plotting capabilities 
+
 **[Hannah Dennisse Y. AQUE]**
 **[James Walte C. Prollo]**
 **[Zell Caamino]**
+
 Back (support))
 - Built comprehensive test suite  
 - Wrote user documentation.
