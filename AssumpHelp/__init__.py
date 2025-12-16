@@ -3,7 +3,6 @@ AssumpHelp init
 """
 
 from .hypothesis import Hypothesis
-
 from .linearity import Linearity
 from .homoscedasticity import Homoscedasticity
 from .normality import Normality
@@ -17,7 +16,16 @@ from .utilities import (
     load_output
 )
 
+from .exceptions import InvalidModelError, NotFittedError, InvalidArrayError
+from .validate import validate_sklearn_regressor, validate_array
+
+
 __all__ = [
+    "InvalidModelError",
+    "NotFittedError",
+    "InvalidArrayError",
+    "validate_sklearn_regressor",
+    "validate_array",
     "Hypothesis",
     "Linearity",
     "Homoscedasticity",
@@ -25,7 +33,7 @@ __all__ = [
     "Independence",
     "prepare_vars",
     "interpret_pval",
-    "interpret_dw",
     "plot_assump",
-    "load_output"
+    "interpret_dw",
+    "load_output",
 ]
