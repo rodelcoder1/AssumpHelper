@@ -1,0 +1,9 @@
+Scale-Location Plot (Scale-Location Plot)
+
+If the plot shows points evenly spread along a horizontal line, the residuals have constant variance.
+> The assumption of homoscedasticity is NOT VIOLATED.
+
+If the plot shows a pattern, such as points spreading out or narrowing (e.g., funnel shape), the residuals do not have constant variance.
+> The assumption of homoscedasticity is VIOLATED.
+
+Always double check with the Breusch-Pagan test.

@@ -1,0 +1,9 @@
+Independence Plot (Residuals vs. Order Plot)
+
+If the points are randomly scattered with no pattern, the residuals are independent.
+> The assumption of independence is NOT VIOLATED.
+
+If the points show a visible pattern (trend, wave, cycle, or clustering), the residuals are not independent.
+> The assumption of independence is VIOLATED.
+
+Always double check with the Durbin–Watson test.
