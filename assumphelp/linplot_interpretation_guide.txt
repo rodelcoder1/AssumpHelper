@@ -1,9 +1,0 @@
-Linearity Plot (Residuals vs Fitted Values)
-
-If the plot shows a random scatter of points around the horizontal axis with no clear curve, the relationship between the predictors and the outcome is linear.
-> The assumption of linearity is NOT VIOLATED.
-
-If the plot shows a curve or systematic pattern in the scatter of points, the relationship between the predictors and the outcome is not linear.
-> The assumption of linearity is VIOLATED.
-
-Always double check with the RESET test.
