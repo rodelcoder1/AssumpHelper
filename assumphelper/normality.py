@@ -1,4 +1,5 @@
 import statsmodels.api as sm
+import scipy.stats as sp
 from .hypothesis import Hypothesis
 from .utilities import prepare_vars, interpret_pval, plot_assump, load_output
 from .check import check_shapiro_resids
@@ -23,7 +24,7 @@ class Normality(Hypothesis):
             raise NotFittedError("Call fit() before test().")
 
         check_shapiro_resids(self.residuals)
-        shapiro_stat, shapiro_pval = sm.shapiro(self.residuals)
+        shapiro_stat, shapiro_pval = sp.shapiro(self.residuals)
         self.result = shapiro_pval
         print("Shapiro-Wilk Test for Normality")
         print(f"W-statistic: {shapiro_stat:.4f}      p-value: {shapiro_pval:.4f}")
