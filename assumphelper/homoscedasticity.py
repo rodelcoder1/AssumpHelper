@@ -23,7 +23,7 @@ class Homoscedasticity(Hypothesis):
         if not getattr(self, "fit_done", False):
             raise NotFittedError("Call fit() before test().")
              
-        validate_residual_variance(self.residuals)
+        check_residual_var(self.residuals)
         bp_test = het_breuschpagan(self.residuals, self.x_cons)
         bp_stat, bp_pval, _, _ = bp_test
         self.result = bp_pval
