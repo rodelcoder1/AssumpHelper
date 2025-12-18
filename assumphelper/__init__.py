@@ -17,7 +17,7 @@ from .utilities import (
 )
 
 from .exceptions import InvalidModelError, NotFittedError, InvalidArrayError, UndefinedTestError
-from .check import check_sklearn_regressor, check_array, check_resid_var, check_shapiro_resids
+from .check import check_sklearn_regressor, check_array, check_resid_var, check_shapiro_resids, check_dw_resids
 
 
 __all__ = [
