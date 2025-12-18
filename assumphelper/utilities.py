@@ -34,7 +34,7 @@ def interpret_pval(pval , assump):
     if pval > 0.05:
         return f"If alpha = 0.05 and p-value > 0.05: Assumption of {assump.capitalize()} is NOT VIOLATED.\n"
     else:
-        return f"If alpha = 0.05 and p-value > 0.05: Assumption of {assump.capitalize()} is VIOLATED.\n"
+        return f"If alpha = 0.05 and p-value < 0.05: Assumption of {assump.capitalize()} is VIOLATED.\n"
 
 def plot_assump(fitted: np.ndarray, residuals: np.ndarray,assumption: str):
 
