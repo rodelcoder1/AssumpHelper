@@ -13,6 +13,7 @@ class Linearity(Hypothesis):
     def fit(self):
         self.model.fit(self.x_cons, self.y)
         self.fitted, self.residuals = prepare_vars(self.model, self.x_cons, self.y)
+        self.fit_done = True
         return self
         
    
@@ -20,7 +21,9 @@ class Linearity(Hypothesis):
         """
         Perform Ramsey RESET test for linearity.
         """
-        self.fit()
+        if not getattr(self, "fit_done", False):
+            raise NotFittedError("Call fit() before test().")
+            
         reset_model = sm.OLS(self.y,self.x_cons).fit()
         reset_result = linear_reset(reset_model, power=3,test_type="fitted")
         result_fstat, result_pval = reset_result.statistic, reset_result.pvalue
