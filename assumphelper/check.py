@@ -35,3 +35,16 @@ def check_shapiro_resids(residuals):
         raise UndefinedTestError(
             "Shapiro–Wilk test is undefined because residuals are constant."
         )
+def check_dw_resids(residuals):
+    n = len(residuals)
+
+    if n < 2:
+        raise UndefinedTestError(
+            "Durbin–Watson test requires at least 2 residuals."
+        )
+
+    if np.var(residuals) == 0:
+        raise UndefinedTestError(
+            "Durbin–Watson test is undefined because residuals are constant "
+            "(perfect model fit)."
+        )
