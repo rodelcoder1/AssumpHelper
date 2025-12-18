@@ -1,6 +1,7 @@
 import statsmodels.api as sm
 from .hypothesis import Hypothesis
 from .utilities import prepare_vars, interpret_pval, plot_assump, load_output
+from .check import check_shapiro_resids
 
 class Normality(Hypothesis): 
     """
