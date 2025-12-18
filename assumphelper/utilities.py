@@ -9,15 +9,15 @@ from sklearn.base import BaseEstimator, RegressorMixin
 import matplotlib.pyplot as plt
 import sklearn as sk
 import os
-from .validate import validate_sklearn_regressor, validate_array
+from .check import check_sklearn_regressor, check_array
 
 def prepare_vars(model: BaseEstimator, x:np.ndarray , y: np.ndarray):
     """
     Prepares fitted and residual values
     """ 
-    validate_sklearn_regressor(model)
-    validate_array(x,"x")
-    validate_array(y,"y")
+    check_sklearn_regressor(model)
+    check_array(x,"x")
+    check_array(y,"y")
     
     fitted = model.predict(x) #fitted
     
