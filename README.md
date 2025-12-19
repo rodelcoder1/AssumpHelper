@@ -32,7 +32,6 @@ Linear regression relies on several statistical assumptions (linearity, normalit
 * **Homoscedasticity** (Breusch–Pagan Test)
 * **Normality of Residuals** (Shapiro–Wilk Test)
 * **Independence of Errors** (Durbin–Watson Test)
-* **Model Summary & Diagnostics**
 
 ---
 
@@ -71,7 +70,7 @@ pip install assumphelper
 ```python
 import pandas as pd
 import statsmodels.api as sm
-import AssumpHelp
+import assumphelper as ah
 
 df = pd.DataFrame({
     "y": [10, 12, 13, 15, 16, 18],
@@ -106,9 +105,9 @@ The output includes statistical test results, interpretations, and diagnostic pl
 
 AssumpHelper provides:
 
-* Test statistics and p‑values
+* Test statistics and their p‑values
 * Plain‑language interpretation (Pass / Violation)
-* Diagnostic plots (residuals, Q‑Q plots, etc.)
+* Diagnostic plots (residuals vs fitted, Q‑Q plots, etc.)
 * Structured interpretation guides for reports and presentations
 
 ---
