@@ -20,7 +20,7 @@ Linear regression relies on several statistical assumptions (linearity, normalit
 ## ✨ Features
 
 * Automated **linear regression assumption testing**
-* Built‑in **statistical tests** with interpretation
+* Built‑in **statistical tests** with interpretation guides
 * **Visualization support** for diagnostics
 * Beginner‑friendly design with clear outputs
 * Modular structure for easy extension
