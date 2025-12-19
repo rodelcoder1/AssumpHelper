@@ -61,7 +61,7 @@ AssumpHelper/
 Install the required packages using pip:
 
 ```bash
-pip install AssumpHelper
+pip install assumphelper
 ```
 
 ---
@@ -101,15 +101,13 @@ AssumpHelper provides:
 * Test statistics and p‑values
 * Plain‑language interpretation (Pass / Violation)
 * Diagnostic plots (residuals, Q‑Q plots, etc.)
-* Structured summaries for reports and presentations
+* Structured interpretation guides for reports and presentations
 
 ---
 
 ## 🎓 Intended Users
 
 * Students learning **linear regression**
-* Researchers conducting **quantitative analysis**
-* Educators teaching **statistics and econometrics**
 * Beginners who want clarity without losing rigor
 
 ---
@@ -136,14 +134,6 @@ This project is inspired by common regression workflows in:
 
 (See `requirements.txt` for the full list.)
 
----
-
-## 📈 Future Improvements
-
-* More regression models (e.g., logistic regression)
-* Exportable reports (PDF / HTML)
-* GUI or dashboard support
-* Expanded visualization options
 
 ---
 
@@ -156,7 +146,7 @@ This project is released under the **MIT License**.
 ## 👤 Author
 
 # Developers
-**[Kirstine Roise G. Moog]** 
+**[Kirsten Roise G. Moog]** 
 
 Our distinguish Leader &  Inceptionist & Structural Design 
 
