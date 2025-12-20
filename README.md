@@ -1,4 +1,3 @@
-<img width="859" height="678" alt="image" src="https://github.com/user-attachments/assets/896698b8-f57e-45ea-80f7-ad7aa661cf62" /># AssumpHelper
 # Overview
 This Library provides a comprehensive framework for testing the fundamental assumptions of linear regression models. It implements automated diagnostic tools to check whether your regression model meets the statistical requirements necessary for valid inference and prediction.
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
