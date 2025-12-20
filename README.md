@@ -75,57 +75,9 @@ pip install assumphelper
 ## 🚀 Basic Usage
 
 ```python
-import pandas as pd
-import statsmodels.api as sm
-import AssumpHelper as ah
-
-# Sample dataset
-df = pd.DataFrame({
-    "y": [10, 12, 13, 15, 16, 18],
-    "x1": [1, 2, 3, 4, 5, 6]
-})
-
-# Define variables
-X = sm.add_constant(df["x1"])
-y = df["y"]
-
-# Fit linear regression model
-model = sm.OLS(y, X).fit()
-
-# Prepare fitted values and residuals
-fitted, residuals = AssumpHelp.prepare_vars(model, X, y)
-
-# Check LINEARITY assumption
-AssumpHelp.plot_assump(fitted, residuals, "linearity")
-
-
-
+# code here
 ```
 <img width="578" height="455" alt="image" src="https://github.com/user-attachments/assets/718688f0-4694-44e0-95d0-b04e8131a09d" />
-
-Intercept (β₀) ≈ 8.60
-Slope (β₁) ≈ 1.54
-## Interpretations
-For every one-unit increase in x₁, the dependent variable y increases by approximately 1.54 units, indicating a positive linear relationship.
-
-## 📈 Linearity Plot (Residuals vs Fitted Values)
-What the Plot Shows
-
-X-axis: Fitted (predicted) values
-
-Y-axis: Residuals (errors)
-
-Horizontal line at 0
-
-You can see that:
-
-Residuals are scattered randomly around zero
-
-There is no curved or systematic pattern
-
-Points do not form a U-shape or trend
-
-The output composed statistical test results, interpretations, and diagnostic plots.
 
 ---
 
